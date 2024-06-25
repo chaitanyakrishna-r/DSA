@@ -6,12 +6,12 @@ int main(){
     int n;
     cin>>n;
 
-    int i = 0;
+    int i = 1;
 
-    while(i < n){
+    while(i <= n){
         int j = 1;
         while(j <= n){
-            cout<<" * ";
+            cout<< i <<" ";
             j++;
         }
         cout<<endl;
