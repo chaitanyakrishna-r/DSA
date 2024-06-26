@@ -19,7 +19,7 @@ int main(){
     
         int col =1;
         while(col<=i){
-            cout<<"*"<< " ";
+            cout<<i<< " ";
             col++;
         }
         cout<<endl;
