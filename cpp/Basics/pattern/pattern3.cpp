@@ -22,5 +22,19 @@ int main(){
 
     }
     
+    int x =1;
+    while (x <= n)
+    {
+        int y=1;
+        while (y<=n)
+        {
+            cout<<(n-y+1)<<" ";
+            y++;
+        }
+        cout<<endl;
+        x++;
+
+    }
+    
 
 }
