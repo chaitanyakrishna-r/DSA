@@ -1,8 +1,9 @@
-   // if(n == 2){
-    //     cout<<"Its prime number";
-    // }
-    // else if(n%2 != 0){
-    //     cout<<"its prime number";
-    // }else{
-    //     cout<<"its Not a prime number";
-    // }
+int a=n;
+    int b=0;
+    while(a>=0){
+        b=a%10;
+        cout<<b<<endl;
+        a=n/10;
+        cout<<a<<endl;
+    }
+    
