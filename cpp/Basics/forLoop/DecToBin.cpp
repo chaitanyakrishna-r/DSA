@@ -43,8 +43,7 @@ int main(){
         
     }
     cout<<"final answer is :"<<ans;
-
-
+    
 // second apporach
     
     // int i=0;int ans=0;
