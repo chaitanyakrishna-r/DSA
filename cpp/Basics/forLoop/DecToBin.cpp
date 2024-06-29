@@ -1,4 +1,5 @@
 #include <iostream>
+#include<math.h>
 using namespace std;
 
 
@@ -30,18 +31,19 @@ int main(){
 
 // with pow from math lib
     int ans=0;
-    int power=1;
+    int i=0;
     while (n != 0)
     {
         
         int digit = (n&1);
-        cout<<"digit  "<<digit<<endl;
         n=n>>1;
-        ans=(digit*power)+ans;
+        ans=(digit * pow(10,i))+ans;
         cout<<"ans: "<<ans<<endl;  
-        power=power*10;
-        cout<<power<<endl;
+        i++;
+        
     }
     cout<<"final answer is :"<<ans;
+
+
     
 }
