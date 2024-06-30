@@ -19,4 +19,4 @@ int main(){
        power=power*2;
     }
     cout<<ans<<endl;
-}
+} 
