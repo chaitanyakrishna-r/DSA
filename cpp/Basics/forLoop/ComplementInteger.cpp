@@ -37,4 +37,5 @@ int main(){
         i++;
     }
     cout<<"the complement of number : "<<com<<endl;
+    cout<<(13>>1)<<endl;
 } 

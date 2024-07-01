@@ -57,6 +57,19 @@ int main(){
     //     cout<<ans<<",";
     // }
     // cout<<ans;
+
+// with out usig power and with or bitwise operator
+    // int ans = 0;
+    //     int i = 0; // Position of current binary digit
+
+    //     while (n != 0) {
+    //         int digit = n & 1; // Extract the least significant bit
+    //         ans = ans | (digit << i); // Add the digit to the result
+    //         n = n >> 1; // Shift the number right by 1
+    //         i++; // Move to the next position
+    //     }
+
+    //     cout << "Binary representation: " << ans << endl;
  
     
 }
