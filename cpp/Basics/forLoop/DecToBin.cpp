@@ -37,6 +37,7 @@ int main(){
         
         int digit = n & 1;
         ans=(digit * pow(10, i))+ans;
+        
         n=n>>1;
         cout<<"ans: "<<ans<<endl;  
         i++;
