@@ -4,20 +4,19 @@ using namespace std;
 int main(){
     int n;
     cin>>n;
-
-    int ans=0;
-    while (n!=0)
-    {
-        int digit = n%10;//returns the last digit
-        n = n/10;
-        if((ans>INT32_MAX/10)||(ans<INT32_MIN/10)){
-            cout<<"0"<<endl;
-            return 0;
-        }
-
-        ans=(ans*10)+digit;
+    int m = n;
+    if(n ==0){
+        cout<<"1";
+        return 1 ;
     }
+
+    int mask=0;
+    while (m !=0 )
+    {
+       mask =(mask << 1) |1;
+       m=m >> 1;
+    }
+    int ans = (~n) & mask;
     cout<<ans<<endl;
-    int a = INT32_MAX;
-    cout<<a<<endl;   
+
 }
