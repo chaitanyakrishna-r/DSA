@@ -4,9 +4,6 @@ using namespace std;
 
 
 int main(){
-
-
-
     int n;
     cout<<"Enter the number"<<endl;
     cin>>n;
@@ -27,7 +24,6 @@ int main(){
     //     cout<<power<<endl;
     // }
     // cout<<"final answer is :"<<ans;
-
 
 // with pow from math lib
     int ans=0;
@@ -70,6 +66,5 @@ int main(){
     //     }
 
     //     cout << "Binary representation: " << ans << endl;
- 
     
 }

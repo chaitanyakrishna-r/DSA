@@ -2,21 +2,33 @@
 using namespace std;
 
 int main(){
-    int n;
-    cin>>n;
-    int m = n;
-    if(n ==0){
-        cout<<"1";
-        return 1 ;
-    }
+    int m;
+    cout<<"Enter the number : "<<endl;
+    cin>>m;
 
-    int mask=0;
-    while (m !=0 )
-    {
-       mask =(mask << 1) |1;
-       m=m >> 1;
+    bool isPrime = true;
+    // edge case
+     if(m == 0){
+        cout<<"The number is zero is its prime"<<endl;
+        return 0;
     }
-    int ans = (~n) & mask;
-    cout<<ans<<endl;
+    int n=1;
+    while(n <= m){
+            for(int i=2; i<n ; i++){
+                if((n%i) == 0){
+                isPrime = false;
+                }
+               
+            }
+            if(isPrime){
+                cout<<n<<" ";
+                cout<<"The number "<<n<<" is prime"<<endl;
+            }
+            else{
+                cout<<"The number "<<n<<" is not prime"<<endl;
+                isPrime = true;
+            }
+        n++;
+    }
 
 }
