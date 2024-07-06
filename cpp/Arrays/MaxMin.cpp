@@ -47,6 +47,7 @@ int getMin(int arr[],int size){
 }
 
 int main(){
+    
     int size;
     cin>>size;
 
