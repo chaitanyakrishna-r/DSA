@@ -1,5 +1,5 @@
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
 // int duplicateElement(int arr[],int size){
    
@@ -12,33 +12,26 @@
 //         }
 //     }
 // }
-
-
-// int main(){
-//     int arr[5]={1,1,2,3,4};
-//     cout<<endl<<"The duplicate element is "<<duplicateElement(arr,5);
-//     return 0;
-// }
-
-#include <iostream>
-using namespace std;
-
-int findDuplicate(int arr[], int size) {
-    int xorSum = 0;
+int duplicate(int arr[],int size){
+    int ans=0;
     
-    // XOR all elements in the array
-    for (int i = 0; i < size; ++i) {
-        xorSum ^= arr[i];
+    
+    for(int i=0; i<size; i++){
+        ans= ans^arr[i];
     }
-    
-    return xorSum;
+
+    for(int i=1; i<size; i++){
+        ans= ans^i;
+        
+    }
+    return ans;
 }
 
-int main() {
-    int arr[5] = {1, 3, 2, 3, 4};
-    int duplicate = findDuplicate(arr, 5);
-    
-    cout << "The duplicate element is " << duplicate << endl;
-    
-    return 0;
+
+int main(){
+    int arr[7]={7,8,6,3,4,5,3};
+    // cout<<endl<<"The duplicate element is "<<duplicateElement(arr,5);
+    // return 0;
+    cout<<endl<<"The duplicate element is "<<duplicate(arr, 7);
 }
+
