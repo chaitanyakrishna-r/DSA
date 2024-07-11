@@ -52,6 +52,7 @@ int main(){
     while (m !=0 )
     {
        mask =(mask << 1) |1;
+       cout<<mask<< " ";
        m=m >> 1;
     }
     int ans = (~n) & mask;

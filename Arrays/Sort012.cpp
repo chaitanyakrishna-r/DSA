@@ -30,7 +30,7 @@ void sortone(int arr[], int size){
     
 }
 
-int main(){
+int main(){ 
     int arr[6]={1,0,1,0,1,0};
     int size=6;
 
