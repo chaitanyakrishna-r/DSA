@@ -24,8 +24,8 @@ int peakIndex(int arr[],int size){
 
 
 int main(){
-    int arr[7]={2,3,4,5,6,8,1};
+    int arr[7]={2,3,4,5,1,1,1};
     int ans = peakIndex(arr,7);
-    cout<<ans;
+    cout<<arr[ans]<<" at index : "<<ans ;
     return 0;
 }
