@@ -6,7 +6,6 @@ int peakIndex(int arr[],int size){
     int end = size-1;
     int mid ;
 
-    
     while (start < end)
     {
        mid = start+(end-start)/2;
@@ -15,13 +14,10 @@ int peakIndex(int arr[],int size){
         start=mid+1;
        }else{
         end = mid;
-       }
-       
-       
+       } 
     }
     return start;
 }
-
 
 int main(){
     int arr[7]={2,3,4,5,1,1,1};
