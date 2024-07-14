@@ -16,8 +16,8 @@ int Pivot(int arr[],int size){
         right = right+ arr[start];
         end--;
     }
-    cout<<left<<"left"<<endl;
-    cout<<right<<"right"<<endl;
+    cout<<left<<" left"<<endl;
+    cout<<right<<" right"<<endl;
 }
 
 
