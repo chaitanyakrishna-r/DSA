@@ -1,31 +1,30 @@
 #include<iostream>
 using namespace std;
 
-void PrintArr(int arr[], int n){
+
+void printArr(int arr[], int n){
     for(int i=0; i<n; i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
 }
-
-int SelectionSort(int arr[],int n){
-   
+void selectionSort(int arr[],int n){
     for(int i=0; i<n-1; i++){
-        int minIndex = i;
-        for(int j=i+1; j<n ;j++){
-            if(arr[j] < arr[minIndex])
+        int minIndex =i;
+        for(int j=i+1; j<n; j++){
+            if(arr[minIndex]>arr[j]){
                 minIndex = j;
+            }
+
         }
-        
-         swap(arr[i],arr[minIndex]);
-        
-   
+        swap(arr[i],arr[minIndex]);
     }
-    PrintArr(arr, n);
+    printArr(arr,n);
 }
 
 
 int main(){
-    int arr[5]={2,3,1,4,3};
-    SelectionSort(arr,5);
+    int arr[10]={10,2,9,8,6,4,73,2,2,56};
+    selectionSort(arr,10);
     return 0;
 }
