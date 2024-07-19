@@ -18,8 +18,8 @@ void selectionSort(int arr[],int n){
 
         }
         swap(arr[i],arr[minIndex]);
-    }
     printArr(arr,n);
+    }
 }
 
 
