@@ -16,5 +16,5 @@ int main(){
     for(int i:n){
         cout<<i<<" ";
     }
-    return 0;
+    
 }
