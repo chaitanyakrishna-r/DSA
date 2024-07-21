@@ -14,9 +14,16 @@ int main(){
     s.insert(4);    
     s.insert(5);    
     s.insert(5);    
-    s.insert(6);    
+    s.insert(6);   
+
+    s.erase(s.begin()); 
     for(auto i:s){
         cout<<i<<" ";
     }
+    cout<<endl<<s.count(4)<<endl;
+    set<int> :: iterator itr = s.find(2);
+   for(auto it = itr;it!=s.end();it++){
+        cout<<*it<<" ";
+   }
     return 0;
 }
