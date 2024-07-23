@@ -1,4 +1,1 @@
-while (pos<n)
-    // {
-    //   arr[pos++] = 1;
-    // }
+  cout<<"i-"<<i<<endl;
