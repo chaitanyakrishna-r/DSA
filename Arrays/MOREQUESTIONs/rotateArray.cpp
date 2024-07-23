@@ -77,7 +77,8 @@ void chatgptRotateArr(int arr[],int n,int k){
     k= k%n;
     Reverse(arr,0,n-1);
     Reverse(arr,0,k-1);
-    Reverse(arr,k,n-1);
+    reverse(arr+k,arr+n);//stl reverse
+    PrintArr(arr,7);
 }
 
 int main(){
@@ -86,7 +87,7 @@ int main(){
     int arr1[7]={1,2,3,4,5,6,7};
     // algoRotateArr(arr,3);
     // rotateArr(arr,3);
-    chatgptRotateArr(arr1,7,8);
+    chatgptRotateArr(arr1,7,3);
     return 0;
 
 }
