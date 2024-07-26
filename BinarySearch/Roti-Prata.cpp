@@ -7,14 +7,14 @@ bool isPossbile(int arr[], int chief, int prata, int mid){
      int pratas = 0;
 
      for(int i=0; i<chief; i++){
-        int time = 0;
-        int j=1;
-        while (time + (arr[i] * j) <= mid)
-        {
-            pratas++;
-            time = time + (arr[i] * j);
-            j++;
-        }
+            int time = 0;
+            int j=1;
+            while (time + (arr[i] * j) <= mid)
+            {
+                pratas++;
+                time = time + (arr[i] * j);
+                j++;
+            }
         }
         if(pratas < prata){
             return false;

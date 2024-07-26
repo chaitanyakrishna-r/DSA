@@ -46,7 +46,14 @@ int pivot(int arr[], int size){
 }
 
 int main(){
-    int arr[6]={7,9,10,2,3,3};
-    pivot(arr,5);
+    int arr[]={4,5,8,9,};
+    int n=5;
+    int ans = pivot(arr,5);
+   
+    if(n-1 == ans ){
+        cout<<"the array is not sorted and rotated"<<endl;
+    }else{
+        cout<<"The array is soted and rotated"<<endl;
+    }
     return 0;
 }
