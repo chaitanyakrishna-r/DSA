@@ -58,7 +58,7 @@ bool checkValidPalidrome(string s){
 
     while (start < end)
     {
-        if(temp[start] != temp[end]){
+        if(temp[start++] != temp[end--]){
             cout<<"The given string is not palindrome";
             return false;
         }
