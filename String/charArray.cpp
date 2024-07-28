@@ -16,5 +16,7 @@ int main(){
     cin>>name;
     getLength(name);
     cout<<"This output is "<<name;
+
+    char ch[12] ="hello world";
     return 0;
 }
