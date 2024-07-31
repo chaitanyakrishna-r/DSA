@@ -6,11 +6,11 @@ using namespace std;
 void printArr(int arr[],int size){
     for(int i=0; i<size; i++){
         cout<<arr[i]<<" ";
-    }
+    }cout<<endl;
 }
 bool checkEqual(int a[26],int  b[26]){
     for(int i=0; i<26; i++){
-        if(a[i] !=b[i])
+        if(a[i] != b[i])
             return 0;  
     }
     return 1;
@@ -36,20 +36,20 @@ bool PermutationInString(string str1, string str2){
         arr2[index]++;
         i++;
     }
+    printArr(arr1,26);
+    printArr(arr2,26);
+  
     if(checkEqual(arr1,arr2))
         return 1;
     
     while(i<str2.length()){
-        char newChar = str2[i];
-        int index = newChar -'a';
-        arr2[index]++;
 
-        char oldChar = str2[i - windowSize];
-        index = oldChar -'a';
-        arr2[index]--;
+        arr2[str2[i]-'a']++;
+        arr2[str2[i - windowSize]-'a']--;
         
         i++;
-        
+        printArr(arr1,26);
+        printArr(arr2,26);
         if(checkEqual(arr1,arr2))
         return 1;
     }
@@ -59,7 +59,7 @@ bool PermutationInString(string str1, string str2){
 
 int main(){
     string str1 = "ab";
-    string str2 = "eidboaoo";
+    string str2 = "adboaoo";
 
     int ans = PermutationInString(str1, str2);
     cout<<"The ans is ; "<<endl;
