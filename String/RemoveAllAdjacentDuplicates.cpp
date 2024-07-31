@@ -23,7 +23,7 @@ string removeAdjacentDuplicates(string s){
         if(ans.empty()){
             ans.push_back(currentCharacter);
             cout<<"In first loop "<<ans<<endl;
-            cout<<"back"<<ans.back()<<endl;
+            cout<<"back "<<ans.back()<<endl;
         }
         else if(currentCharacter == ans.back()){
             ans.pop_back();
@@ -35,7 +35,6 @@ string removeAdjacentDuplicates(string s){
         }
 
     }
-    
     return ans;
 }
 
