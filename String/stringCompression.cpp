@@ -8,60 +8,59 @@ void printArr(int arr[]){
 }
 
 // non consecutive
-// string stringCompression(string s){
-//     int count[26]={0};
-//     string ans="";
-//     int i=0;
-//     for(; i<s.length(); i++){
-//         count[s[i]-'a']++;
-//     }
-//     printArr(count);
+string stringCompression(string s){
+    int count[26]={0};
+    string ans="";
+    for(int i=0; i<s.length(); i++){
+        count[s[i]-'a']++;
+    }
+    printArr(count);
 
-//     for(int j=0 ; j<26; j++){
-//         char ch = j + 'a';
-//         if(count[j] > 0){
-//          ans.push_back(ch);
-//         }
-//         if(count[j] >= 1){
-//             string cnt = to_string(count[j]) ;
-//             for(char ch: cnt){
-//                 ans.push_back(ch);
-//             }
+    for(int j=0 ; j<26; j++){
+        char ch = j + 'a';
+        if(count[j]){
+         ans.push_back(ch);
+        }
+        if(count[j] > 1){
+            string cnt = to_string(count[j]) ;
+            for(char ch: cnt){
+                ans.push_back(ch);
+            }
             
-//         }
+        }
 
-//     }
-//     cout<<ans<<endl;
-// }
+    }
+    cout<<ans<<endl;
+}
 
 
 // consecutive
-void stringCompression(string& s){
-    int i=0;
-    int ansIndex =0;
-    int n =s.length();
+// void stringCompression(string& s){
+//     int i=0;
+//     int ansIndex =0;
+//     int n =s.length();
 
 
-    while(i<n){
-        int j = i+1;
-        while(j<n && s[i] == s[j]){
-            j++;
-        }
+//     while(i<n){
+//         int j = i+1;
+//         while(j<n && s[i] == s[j]){
+//             j++;
+//         }
 
-    // storing current character;
-        s[ansIndex++] = s[i];
-        int count = j - i;
-        if(count > 1){
-            string cnt = to_string(count);
-            for(char ch : cnt){
-                s[ansIndex++] = ch;
-            }
-        }
-        i=j;
+//     // storing current character;
+//         s[ansIndex++] = s[i];
+//         int count = j - i;
+//         if(count > 1){
+//             string cnt = to_string(count);
+//             for(char ch : cnt){
+//                 s[ansIndex++] = ch;
+//             }
+//         }
+//         i=j;
         
-    }
-    cout<<ansIndex<<"index"<<endl;
-}
+//     }
+//     cout<<ansIndex<<"index"<<endl;
+// }
 
 
 int main(){
