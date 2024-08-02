@@ -5,7 +5,8 @@ using namespace std;
 //     if(num == 1 || num == 0){
 //         return false;
 //     }
-//     for(int i=2; i < num; i++){
+// instead of using sqrt we can i*i  do this ;
+//     for(int i=2; i*i < num; i++){
 //         if(num % i == 0){
 //             cout<<"The number is not prime"<<endl;
 //             return false;
