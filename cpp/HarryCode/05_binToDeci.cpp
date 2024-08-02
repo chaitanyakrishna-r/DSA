@@ -5,16 +5,14 @@ using namespace std;
 int binToDeci(int num){
 
     int ans = 0; 
-    int i=0;
+    int power = 1;
     while(num != 0){
         int digit = num % 10;
         num = num / 10;
-        if(digit == 1){
-            ans = ans + pow(2,i++);
-        }else{
-            i++;
+        if(digit & 1){
+            ans = ans + power;
         }
-       
+        power *= 2;
     }
     cout<<ans<<endl;
     return ans;
