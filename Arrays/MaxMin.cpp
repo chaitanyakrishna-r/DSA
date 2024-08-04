@@ -28,7 +28,7 @@ int getMax(int arr[],int size){
             max=arr[i];
         }
     }
-    return max;
+    return max ;
     
 }
 
