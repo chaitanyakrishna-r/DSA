@@ -51,7 +51,6 @@ void printSprialMatrix(int arr[][3],int row, int col){
         cout<<ans[i]<<" ";
     }
     cout<<endl;
-    
 }
 
 
