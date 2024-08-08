@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 void print2D(int arr[][3],int row, int col){
@@ -39,6 +40,17 @@ void rotate2DArray(int arr[][3],int row, int col){
 
 }
 
+
+// other appraoch;
+// void rotate2DArray(int arr[][3],int row, int col){
+//     vector<vector<int>> temp = matrix;
+
+//     for(int i=0; i<row; i++){
+//         for(int j=0; j<col; j++){
+//           matrix[j][row-1-i]=  temp[i][j];
+//         }
+//     }
+// }
 int main(){
     int arr[3][3]={{1,2,3},{4,5,6},{7,8,9}};
     rotate2DArray(arr, 3, 3);
