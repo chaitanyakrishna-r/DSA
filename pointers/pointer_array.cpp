@@ -19,12 +19,13 @@ int main(){
     cout<<sizeof(arr)<<endl;
     cout<<sizeof(p)<<endl;
     */
-   int arr[10];
+   int arr[10] = {15,23,8,9};
 //    arr = arr+1;
     int *p = &arr[0];
     cout<<p<<endl;
    cout<<p+1<<endl;
     cout<< *(p+1)<<endl;
+    cout<<*arr<<endl;
 
 
     return 0;
