@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-// brute force
 
+// brute force
 int HCF(int a , int b){
     int ans = 1;
     for(int i=1; i<=min(a,b); i++){
@@ -9,7 +9,7 @@ int HCF(int a , int b){
             ans = i;
 
         }
-        cout<<ans<<" ";
+       
     }
     cout<<"hcf of a and b is : "<<ans;
     return ans;
