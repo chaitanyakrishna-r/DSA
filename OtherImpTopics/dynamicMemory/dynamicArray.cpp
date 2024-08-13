@@ -18,9 +18,13 @@ int getSum(int* arr,int n){
 
 int main(){
     // dynamic allocation of memory
-    // char *ch = new char;
-    // cout<<sizeof(*ch);
-    // cout<<sizeof(ch);
+
+    
+    char *ch = new char;
+    cout<<sizeof(*ch);
+    cout<<sizeof(ch);
+
+
     int  *num = new int;
     *num = 25;
     cout<<*num<<endl;
