@@ -13,5 +13,4 @@ int main(){
     int size = 5;
     printARR(arr, size,3);
     printARR(arr, size);
-    return 0;
 }
