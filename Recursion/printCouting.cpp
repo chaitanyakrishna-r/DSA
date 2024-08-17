@@ -7,12 +7,10 @@ void PrintCount(int n){
     if(n == 0){
         return ;
     }
-     
-   
-
+    //   type:head
     // recursion relation 
     PrintCount(n-1);
-    
+
      // process
     cout<<n<<" ";
 
