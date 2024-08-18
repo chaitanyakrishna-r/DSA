@@ -21,7 +21,7 @@ void sayDigit(int n){
     int digi = n % 10;
     n = n / 10;
 
-    // R call
+    // Recursion call
     sayDigit(n);
 
     cout<<numbers(digi)<<" ";
