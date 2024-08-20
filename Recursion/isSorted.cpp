@@ -17,7 +17,7 @@ bool isSorted(int arr[],int size){
 
     // base case
     if(size ==0 || size ==1){
-,./    }`    aswtyui-
+   }  
    if(arr[0]>arr[1]){
     return false;
    }
@@ -25,7 +25,7 @@ bool isSorted(int arr[],int size){
 
 int main(){
 
-    int arr[6]={1,1,3,5,6,10};
+    int arr[6]={1,1,3,5,6};
     isSorted(arr,6);
 
     return 0;
