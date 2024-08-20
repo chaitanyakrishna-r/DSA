@@ -25,7 +25,7 @@ bool isSorted(int arr[],int size){
 
 int main(){
 
-    int arr[6]={1,1,3,5,6,9};
+    int arr[6]={1,1,3,5,6,10};
     isSorted(arr,6);
 
     return 0;
