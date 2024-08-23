@@ -28,7 +28,7 @@ int main(){
     if(ans){
         cout<<"The key is present"<<endl;
     }else{
-        cout<<"The key is not present"<<endl;
+        cout<<"The key is not presents"<<endl;
     }
     return 0;
 }
