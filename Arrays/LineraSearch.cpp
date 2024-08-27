@@ -14,7 +14,7 @@ bool isFound(int arr[],int number ,int size){
 }
 
 int main(){
-    int arr[5]={1,5,4,7,8};
+    int arr[5]={1,5,4,7,10};
     int number;
     cin>>number;
 
