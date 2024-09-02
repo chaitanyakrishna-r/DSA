@@ -29,7 +29,7 @@ void primeNumber(int num){
             }
         }
        if(isPrime){
-            cout<<" "<<j<<" ";
+            cout<<"hello "<<j<<" ";
        }
     }
     cout<<endl;
