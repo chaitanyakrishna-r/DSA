@@ -18,5 +18,5 @@ int main(){
     cin>>num;
     int factorialNum = factorial(num);
     cout<<factorialNum<<endl;
-   
+   return 0; 
 }
