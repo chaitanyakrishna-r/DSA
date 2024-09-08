@@ -22,5 +22,5 @@ int main(){
     cout<<"Enter the binary number : "<<endl;
     cin>>binary;
     binToDeci(binary);
-    return 0;
+    
 }
