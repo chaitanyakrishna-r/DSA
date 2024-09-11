@@ -22,5 +22,5 @@ int main(){
 
     cout<<maxi(arr,7)<<endl;
     cout<<mini(arr,7)<<endl;
-    return 0; 
+ 
 }
