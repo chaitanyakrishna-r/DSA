@@ -24,6 +24,7 @@ bool binarySearch(int arr[], int start,int end, int key){
     if(arr[mid] == key){
         return true;
     }
+    
     if(arr[mid] < key){
         return binarySearch(arr,mid + 1,end, key );
     }else{
