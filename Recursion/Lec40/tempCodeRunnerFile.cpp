@@ -93,7 +93,7 @@ vector<string> solution(vector<vector<int>> &mat){
 }
 
 int main(){
-    vector<vector<int>> mat = {{1, 0, 0, 0}, {1, 0, 0, 1}, {1, 1, 0, 0}, {0, 1, 1, 1}};
+    vector<vector<int>> mat = {{1, 0, 0, 0}, {0, 1, 0, 1}, {1, 1, 0, 0}, {0, 1, 1, 1}};
     vector<string> sol = solution(mat);
    
     for(const string& s:sol){
