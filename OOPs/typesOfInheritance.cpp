@@ -32,7 +32,12 @@ class germanShepherd: public dog{
 };
 
 //multiple inheritance
-class
+class hybird: public animal, public human{
+
+};
+
+//heirarchical type
+
 int main(){
     
     dog pug;

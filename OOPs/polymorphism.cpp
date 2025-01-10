@@ -1,6 +1,12 @@
 #include<iostream>
 using namespace std;
 
+//compile time 
+//1.funtion overloading
+//2.operator overloading
+//runtime
+//1.method overriding
+
 class A{
     public:
     void funt(){
