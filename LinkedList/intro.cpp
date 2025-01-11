@@ -62,36 +62,42 @@ void insertioAtPosition(Node* &tail,Node* &head, int position, int d){
 
 }
 
-void deleteNode(Node* & head,int position){
+void deleteNode(Node* &head, int position, Node* &tail) {
     if(position == 1){
-        //delete start node or first node
+        // delete start node or first node
         Node* temp = head;
         head = head->next;
-        temp-> next = NULL;
+        temp->next = NULL;
         delete temp;
     }
-    else{
-        //middle position or end 
-        Node* prev= NULL;
+    else {
+        // middle position or end
+        Node* prev = NULL;
         Node* curr = head;
         int count = 1;
 
-        while (count < position && curr != nullptr)
-        {
+        while(count < position && curr != nullptr) {
             prev = curr;
             curr = curr->next; 
             count++;
         }
-        if(curr == nullptr){
-            cout<<" the node has exceeded the leng"<<endl;
+
+        if(curr == nullptr) {
+            cout << "The node has exceeded the length" << endl;
             return;
+        } 
+
+        // Update tail if the last node is being deleted
+        if(curr->next == NULL) {
+            tail = prev;
         }
+
         prev->next = curr->next;
         curr->next = NULL;
-        delete curr;        
+        delete curr;
     }
-    
 }
+
 
 // void deleteNode(Node* &head, int position) {
 //     // Delete the first node
@@ -155,7 +161,10 @@ int main(){
     insertioAtPosition(tail,head, 2, 55);
     printNode(head);
     cout<<"before delete"<<endl;
-    deleteNode(head, 6);
+    deleteNode(head, 5,tail);
     printNode(head);
+
+    cout<<" head " <<head->data<<endl;
+    cout<<" tail "<<tail->data<<endl;
     return 0;
 }
