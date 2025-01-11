@@ -1,3 +1,6 @@
+
+
+
 #include<iostream>
 using namespace std;
 class Node{
@@ -44,7 +47,7 @@ void insertioAtPosition(Node* &tail,Node* &head, int position, int d){
     }
     Node* temp = head;
     int cnt = 1;
-    while(cnt < position -1){
+    while(cnt < position){
         temp = temp -> next;
         cnt++;
     }
@@ -62,70 +65,61 @@ void insertioAtPosition(Node* &tail,Node* &head, int position, int d){
 
 }
 
-void deleteNode(Node* & head,int position){
-    if(position == 1){
-        //delete start node or first node
+// void deleteNode(Node* & head,int position){
+//     if(position == 1){
+//         //delete start node or first node
+//         Node* temp = head;
+//         head = head->next;
+//         delete temp;
+//     }
+//     else{
+//         //middle position or end 
+//         Node* prev= NULL;
+//         Node* curr = head;
+//         int count = 1;
+
+//         while (count < position)
+//         {
+//             prev = curr;
+//             curr = curr->next; 
+//             count++;
+//         }
+//         prev->next = curr->next;
+//         delete curr;        
+//     }
+    
+// }
+
+
+void deleteNode(int position, Node* & head) { 
+
+    //deleting first or start node
+    if(position == 1) {
         Node* temp = head;
-        head = head->next;
-        temp-> next = NULL;
+        head = head -> next;
+        //memory free start ndoe
+        temp -> next = NULL;
         delete temp;
     }
-    else{
-        //middle position or end 
-        Node* prev= NULL;
+    else
+    {
+        //deleting any middle node or last node
         Node* curr = head;
-        int count = 1;
+        Node* prev = NULL;
 
-        while (count < position && curr != nullptr)
-        {
+        int cnt = 1;
+        while(cnt < position) {
             prev = curr;
-            curr = curr->next; 
-            count++;
+            curr = curr -> next;
+            cnt++;
         }
-        if(curr == nullptr){
-            cout<<" the node has exceeded the leng"<<endl;
-            return;
-        }
-        prev->next = curr->next;
-        curr->next = NULL;
-        delete curr;        
+
+        prev -> next = curr -> next;
+        curr -> next  = NULL;
+        delete curr;
+
     }
-    
 }
-
-// void deleteNode(Node* &head, int position) {
-//     // Delete the first node
-//     if (position == 1) {
-//         Node* temp = head;
-//         head = head->next; // Move the head pointer
-//         temp->next = nullptr; // Detach the node
-//         delete temp;          // Free memory
-//         return;
-//     }
-
-//     // Delete a node at a middle or end position
-//     Node* prev = nullptr;
-//     Node* curr = head;
-//     int count = 1;
-
-//     // Traverse to the node just before the one to delete
-//     while (count < position && curr != nullptr) {
-//         prev = curr;
-//         curr = curr->next;
-//         count++;
-//     }
-
-//     // If position is out of bounds
-//     if (curr == nullptr) {
-//         cout << "Position out of range!" << endl;
-//         return;
-//     }
-
-//     // Remove the node
-//     prev->next = curr->next; // Link the previous node to the next of the current
-//     curr->next = nullptr;    // Detach the node
-//     delete curr;             // Free memory
-// }
 
 void printNode(Node* &head){
     Node* temp = head;
@@ -152,10 +146,10 @@ int main(){
     insertionAtHead(head, 12);
     insertionAtHead(head, 15);
     insertionAtTail(tail, 25);
-    insertioAtPosition(tail,head, 2, 55);
+    insertioAtPosition(tail,head, 1, 55);
     printNode(head);
     cout<<"before delete"<<endl;
-    deleteNode(head, 6);
+    deleteNode(6, head);
     printNode(head);
     return 0;
 }
