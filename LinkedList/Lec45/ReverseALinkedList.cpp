@@ -36,7 +36,7 @@ class Node{
 
 
 // approach 2 using recursiton
-Node* ReverlinkedList(Node* curr,Node* prev = NULL){
+/*Node* ReverlinkedList(Node* curr,Node* prev = NULL){
    
     //base case
     if(curr == NULL){
@@ -49,10 +49,24 @@ Node* ReverlinkedList(Node* curr,Node* prev = NULL){
 
     //recursive call
     ReverlinkedList(forward, curr);
+}*/
+
+//approach 3 
+Node* ReverseLinkedList(Node* & head){
+    //base case
+    if(head == NULL || head -> next == NULL){
+        return head;
+    }
+
+    Node* subHead = ReverseLinkedList(head -> next);
+
+    head -> next -> next = head ;
+    head -> next = NULL;
+    return subHead;
 }
 
 //Function to print the linked list
-void printNode(Node* &head){
+void printNode(Node* &head){ 
 
     Node* temp = head;
     while (temp !=NULL)
@@ -89,9 +103,9 @@ int main(){
     // //reverseing ll
     // head = ReverseLinkedList(head);
     
-    Node* ans = ReverlinkedList(head);
+     head = ReverseLinkedList(head);
 
     cout<<"Reversed Linked list: ";
-    printNode(ans);
+    printNode(head);
 
 }
